@@ -26,6 +26,16 @@
             <input class="form-control w-100 mt-1" name="kubun2" required>
         </div>
         
+        <p class="mt-3">くろくまくんからの予定自動通知を受け取る時間帯を選択してください</p>
+        <div>
+            <select class="form-control w-100 mt-1" name="kubun" required>
+                <option value="4:00～5:00">4:00～5:00</option>
+                <option value="5:00～6:00">5:00～6:00</option>
+                <option value="6:00～7:00">6:00～7:00</option>
+                <option value="7:00～8:00">7:00～8:00</option>
+                <option value="8:00～9:00">8:00～9:00</option>
+                <option value="9:00～10:00">9:00～10:00</option>
+       
     
       
         <input type="submit" class="mt-4 btn btn-primary" value="送信">
@@ -76,7 +86,7 @@
                 const kubun3 = $('input[name="kubun3"]').val();
                 const kubun4 = $('input[name="kubun4"]').val();
                 const kubun5 = $('input[name="kubun5"]').val();
-                const msg = `申請\n${day}\n${no}\n${kubun2}`;
+                const msg = `申請\n${day}\n${no}\n${kubun2}\n${kubun}`;
                 sendText(msg);
                 return false;
             });
